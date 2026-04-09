@@ -1,32 +1,68 @@
-# Epilepsy Seizure Detection using Machine Learning
+## 📚 Research Background
 
-## Overview
-This project demonstrates a machine learning-based approach for detecting epileptic seizures using EEG-like features. It is a simplified version of a larger project involving real EEG datasets.
+This project is inspired by recent research in AI/ML-based epilepsy detection and prediction using EEG signals.
 
-## Problem Statement
-Detecting seizures from EEG signals manually is difficult and time-consuming. This project shows how machine learning can help classify seizure vs non-seizure patterns.
+Key observations from literature:
+- Machine learning models like SVM, KNN, Logistic Regression, and Gradient Boosting are widely used :contentReference[oaicite:0]{index=0}  
+- Deep learning models such as CNN, RNN, and Transformer-based architectures achieve higher accuracy :contentReference[oaicite:1]{index=1}  
+- EEG datasets like CHB-MIT are commonly used for seizure detection tasks :contentReference[oaicite:2]{index=2}  
 
-## Features Used
-- Mean
-- Standard Deviation
-- Minimum
-- Maximum
+---
 
-## Model Used
-- Support Vector Machine (SVM)
+## 🧠 System Architecture
 
-## Demo Implementation
-This repository contains a simplified demo version of the project pipeline. The original project involved EEG signal preprocessing, feature extraction, SMOTE, and multiple machine learning models.
+The complete system for epilepsy detection consists of multiple layers:
 
-## How to Run
-pip install -r requirements.txt  
-python demo_model.py  
+1. **Data Acquisition**
+   - EEG signals from sensors or datasets  
+   - Patient metadata and real-time inputs  
 
-## Technologies
-- Python
-- NumPy
-- Pandas
-- scikit-learn
+2. **Preprocessing**
+   - Noise removal (bandpass filtering)  
+   - Signal segmentation into time windows  
+   - Feature extraction (mean, std, FFT, entropy)  
 
-## Author
-Rikta Pati
+3. **Model Training**
+   - Classical ML models (SVM, Random Forest)  
+   - Deep learning models (CNN, LSTM)  
+   - Handling imbalance using SMOTE  
+
+4. **Prediction Layer**
+   - Real-time seizure detection  
+   - Probability-based alerts  
+
+5. **Visualization & Alerts**
+   - Dashboard monitoring  
+   - Notifications for early warnings  
+
+This architecture is based on a layered AI system design for healthcare applications :contentReference[oaicite:3]{index=3}  
+
+---
+
+## 📊 Methodology (Extended)
+
+The complete workflow of the project:
+
+- EEG Signal Collection  
+- Preprocessing & Noise Removal  
+- Feature Extraction  
+- Model Training & Validation  
+- Performance Evaluation (Accuracy, Precision, F1-score)  
+
+Typical model performance (from research):
+- SVM-based models: ~85% accuracy  
+- CNN-LSTM models: ~92% accuracy  
+- Transformer-based models: ~95% accuracy :contentReference[oaicite:4]{index=4}  
+
+---
+
+## 🚀 Real Project vs Demo
+
+| Aspect | Demo Repo | Actual Project |
+|------|--------|--------------|
+| Dataset | Simulated | CHB-MIT EEG |
+| Models | SVM | SVM, KNN, Gradient Boosting |
+| Features | Basic stats | Time + Frequency features |
+| Deployment | Not included | Flask API + Web App |
+
+---
