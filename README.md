@@ -1,63 +1,32 @@
-# epilepsy-seizure-detection-ml
-ML-based seizure detection project using EEG data and classification models
 # Epilepsy Seizure Detection using Machine Learning
 
 ## Overview
-This project presents a machine learning-based approach for seizure detection using EEG signal data. It is based on my academic/internship work on neurological condition prediction, where classification models were explored to distinguish seizure and non-seizure events.
+This project demonstrates a machine learning-based approach for detecting epileptic seizures using EEG-like features. It is a simplified version of a larger project involving real EEG datasets.
 
 ## Problem Statement
-Epileptic seizure detection from EEG signals is an important healthcare problem. Manual analysis of EEG recordings is time-consuming, so machine learning can help in early and efficient identification of seizure activity.
+Detecting seizures from EEG signals manually is difficult and time-consuming. This project shows how machine learning can help classify seizure vs non-seizure patterns.
 
-## Dataset
-- CHB-MIT Scalp EEG Dataset
-- Source: PhysioNet
+## Features Used
+- Mean
+- Standard Deviation
+- Minimum
+- Maximum
 
-## Project Objectives
-- Preprocess EEG-based input data
-- Extract useful statistical features
-- Train machine learning models for classification
-- Compare performance of multiple classifiers
-- Build a basic prediction pipeline
-
-## Models Explored
+## Model Used
 - Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Logistic Regression
-- Gradient Boosting
 
-## Methodology
-1. Collect EEG-related data
-2. Perform preprocessing
-3. Apply feature extraction
-4. Handle imbalance using SMOTE
-5. Train classification models
-6. Evaluate using accuracy/precision
-7. Use the trained model for prediction
+## Demo Implementation
+This repository contains a simplified demo version of the project pipeline. The original project involved EEG signal preprocessing, feature extraction, SMOTE, and multiple machine learning models.
 
-## Tools and Technologies
+## How to Run
+pip install -r requirements.txt  
+python demo_model.py  
+
+## Technologies
 - Python
 - NumPy
 - Pandas
 - scikit-learn
-- Flask
-- imbalanced-learn
-- MNE (for EEG-related processing)
-
-## Demo Implementation
-This repository contains a small demonstration version of the project pipeline to show the overall workflow of seizure classification using machine learning.
-
-## Key Learning Outcomes
-- Healthcare data classification
-- Machine learning model comparison
-- Feature extraction and preprocessing
-- Handling class imbalance
-- Building simple deployment-ready ML workflows
-
-## Future Improvements
-- Use full EEG feature extraction pipeline
-- Add deep learning models like CNN/LSTM
-- Deploy prediction API with Flask
-- Integrate with frontend dashboard for real-time monitoring
 
 ## Author
 Rikta Pati
